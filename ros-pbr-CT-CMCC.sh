@@ -47,7 +47,7 @@ nets=`cat /tmp/pbr/cstnet.txt`
 for net in $nets ; do
   echo "add dst-address=$net action=lookup table=CT"
 done
-} > /var/www/html/nextcloud/data/jacyl4/files/github/ros-pbr-CT-CMCC/ros-pbr-CT-CMCC.rsc 
+} > /var/www/html/nextcloud/data/jacyl4/files/github/ros-pbr-CT-CNC/ros-pbr-CT-CNC.rsc 
 
 
 {
@@ -60,7 +60,7 @@ done
 
 nets=`cat /tmp/pbr/cnc.txt`
 for net in $nets ; do
-  echo "add list=dpbr-CMCC address=$net"
+  echo "add list=dpbr-CNC address=$net"
 done
 
 nets=`cat /tmp/pbr/cmcc.txt`
@@ -82,6 +82,6 @@ nets=`cat /tmp/pbr/cstnet.txt`
 for net in $nets ; do
   echo "add list=dpbr-CT address=$net"
 done
-} > /var/www/html/nextcloud/data/jacyl4/files/github/ros-pbr-CT-CMCC/ros-dpbr-CT-CMCC.rsc 
+} > /var/www/html/nextcloud/data/jacyl4/files/github/ros-pbr-CT-CMCC/ros-dpbr-CT-CNC.rsc 
 
 rm -rf /tmp/pbr
